@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares and Cubes</title>
+    <style type="text/CSS">
+         table,td,th{
+             background-color:lightblue ;
+             border: solid black;
+             text-align: center;
+             border-collapse: collapse;
+             width: 33%;
+             margin: auto;
+             
+         }
+         
+         #blink{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: blueviolet;
+            
+         }
+    </style>
+</head>
+<body>
+    <table border="1" align="center">
+         <tr>
+            <th colspan="3">NUMBERS FROM 0 TO 10 WITH THEIR SQUARES AND CUBES</th>
+        </tr>
+        <tr>
+            <td align="center">NUMBER</td>
+            <td align="center">SQUARE</td>
+            <td align="center">CUBES</td>
+        </tr>
+        <h1 id="blink">
+            Assignment-2 Challenge Compelted
+        </h1>
+        <script type="text/javascript">
+            for(var i=0;i<=10;i++)
+            {
+                document.write("<tr align='center'><td>"+i+"</td><td>"+i*i+"</td><td>"+i*i*i+"</td></tr>")
+            }
+            timer();
+            function timer(){
+                let blink = document.getElementById("blink");
+                blink.style.opacity = blink.style.opacity == 0 ? 1 : 0;
+                setTimeout(timer,500);
+            }
+        </script>
+        
+        
+    </table>
+</body>
+</html>
